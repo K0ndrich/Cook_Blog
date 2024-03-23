@@ -1,10 +1,12 @@
 from django.contrib import admin
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import path, include
 from . import settings
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", include('blog.urls')),
 ]
 # дает возможность работать с медиа файлами при включеном Debug = True в setting.py
 if settings.DEBUG:
