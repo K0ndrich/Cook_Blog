@@ -58,7 +58,6 @@ class Recipe(models.Model):
     prep_time = models.PositiveIntegerField(default=0)
     cook_time = models.PositiveIntegerField(default=0)
     ingredients = models.TextField()
-    ingredients = models.TextField()
     directions = models.TextField()
     post = models.ForeignKey(
         Post, on_delete=models.SET_NULL, related_name="recipe", null=True, blank=True
