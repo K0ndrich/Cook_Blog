@@ -13,7 +13,7 @@ class RecipeInLine(admin.StackedInline):
 @admin.register(models.Post)
 class PostAdmin(admin.ModelAdmin):
     # указывает кокие колонки будут вывовить в базе Post , нужно прописывать регистрацию для етого класса
-    list_display = ["title", "category", "create_at", "id", "author"]
+    list_display = ["title", "category", "author", "create_at", "id"]
     # подключаем редактирование дочерней модели
     inlines = [RecipeInLine]
 

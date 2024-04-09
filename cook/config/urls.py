@@ -11,3 +11,4 @@ urlpatterns = [
 # дает возможность работать с медиа файлами при включеном Debug = True в setting.py
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
