@@ -3,6 +3,7 @@ from django.db import models
 # берем стандартную модель пользователя
 from django.contrib.auth.models import User
 from mptt.models import MPTTModel, TreeForeignKey
+from django.urls import reverse
 
 
 class Category(MPTTModel):
@@ -46,9 +47,19 @@ class Post(models.Model):
     )
     tags = models.ManyToManyField(Tag, related_name="post")
     create_at = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(max_length=200, default="")
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse(
+            "post_single", kwargs={"slug": self.category.slug, "post_slug": self.slug}
+        )
+
+    # возвращает все рецепты указаного поста
+    def get_recipes(self):
+        return self.recipes.all()
 
 
 # блок с рецептом по середине поста
@@ -60,7 +71,7 @@ class Recipe(models.Model):
     ingredients = models.TextField()
     directions = models.TextField()
     post = models.ForeignKey(
-        Post, on_delete=models.SET_NULL, related_name="recipe", null=True, blank=True
+        Post, on_delete=models.SET_NULL, related_name="recipes", null=True, blank=True
     )
 
 

@@ -18,9 +18,9 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
+    context_object_name = "post"
     # указывает какую именно переменую из URL будем обрабатывать
     slug_url_kwarg = "post_slug"
-    context_object_name = "post"
 
 
 def home(request):
