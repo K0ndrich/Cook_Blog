@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django_extensions",
     # mptt библитока позволяет чтоб внутри моделей дилы другие дочерные модели
     "mptt",
+    "ckeditor",
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MPTT_ADMIN_LEVEL_INDENT = 20
+
+CKEDITOR_UPLOAD_PATH = "uploads/"

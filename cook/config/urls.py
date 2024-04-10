@@ -6,6 +6,7 @@ from . import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path("", include('blog.urls')),
 ]
 # дает возможность работать с медиа файлами при включеном Debug = True в setting.py
