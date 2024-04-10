@@ -16,17 +16,17 @@
 
 ## Разработка
 
-##### 1) Клонировать репозиторий
+##### 1 ) Клонировать репозиторий
 
     git clone https://github.com/K0ndrich/Cook_Blog.git
 
-##### 2) Создать виртуальное окружение
+##### 2 ) Создать виртуальное окружение
 
     cd cook_blog
     
     python -m venv venv
     
-##### 3) Активировать виртуальное окружение
+##### 3 ) Активировать виртуальное окружение
     
 Linux
 
@@ -36,23 +36,23 @@ Windows
 
     ./venv/Scripts/activate
 
-##### 4) Устанавливить зависимости:
+##### 4 ) Устанавливить зависимости:
 
     pip install -r req.txt
 
-##### 5) Выполнить команду для выполнения миграций
+##### 5 ) Выполнить команду для выполнения миграций
 
     python manage.py migrate
     
-##### 6) Создать суперпользователя
+##### 6 ) Создать суперпользователя
 
     python manage.py createsuperuser
     
-##### 7) Запустить сервер
+##### 7 ) Запустить сервер
 
     python manage.py runserver
 
-##### 8) Ссылки
+##### 8 ) Ссылки
 
 - Сайт http://127.0.0.1:8000/
 
@@ -60,7 +60,7 @@ Windows
 
 ## License
 
-Copyright (c) 2024-present, Kondrich - Maksim Kondratenko
+Copyright (c) 2024-present, Kondrich 
 
 
 
