@@ -1,4 +1,4 @@
-<h2 align="center">**Cook Blog**</h2>
+<h2 align="center">Cook Blog</h2>
 
 
 ### Ссылки:
