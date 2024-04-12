@@ -8,7 +8,6 @@ urlpatterns = [
         name="post_single",
     ),
     path("<slug:slug>/", views.PostListView.as_view(), name="post_list"),
-    path("", views.home),
-    # подключение ckeditor
-    path("ckeditor/", include("ckeditor_uploader.urls")),
+    path("", views.HomeView.as_view(), name="home"),
+    
 ]

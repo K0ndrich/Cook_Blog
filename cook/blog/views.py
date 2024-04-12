@@ -5,6 +5,13 @@ from django.views.generic import ListView, DetailView
 from blog.models import Post
 
 
+class HomeView(ListView):
+    model = Post
+    # paginate_by количество постов на одну текущую страницу
+    paginate_by = 9
+    template_name = "blog/home.html"
+
+
 class PostListView(ListView):
     model = Post
 
@@ -21,7 +28,3 @@ class PostDetailView(DetailView):
     context_object_name = "post"
     # указывает какую именно переменую из URL будем обрабатывать
     slug_url_kwarg = "post_slug"
-
-
-def home(request):
-    return render(request, "base.html")
